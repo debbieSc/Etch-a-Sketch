@@ -1,10 +1,27 @@
-.container {
+body {
     display: flex;
-    flex-wrap: wrap;
-    width: 1632px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
 
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1632px;
+    
+   
+
+}
+
+button {
+    border: 8px;
+    border: solid;
+    border-color: rgb(248, 197, 235);
+    background-color: rgb(184, 231, 224);
+    margin: 15px;
+    width: 150px;
 }
 
 h1 {
