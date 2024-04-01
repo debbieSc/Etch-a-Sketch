@@ -9,7 +9,8 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 1632px;
+    width: 800px;
+    
     
    
 
@@ -26,4 +27,9 @@ button {
 
 h1 {
     text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
 }
