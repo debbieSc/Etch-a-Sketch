@@ -11,8 +11,9 @@ let choice = "pink";
 let multiple = 0;
 let cellSize = "";
 let colourPick;
+let currentOpacity = 0.1;
 console.log(container.offsetWidth);
-const multicolour = ["red", "yellow", "pink", "green", "orange", "purple", "blue"];
+const multicolour = ["red", "yellow", "hotpink", "green", "orange", "purple", "blue"];
 
 
 
@@ -63,7 +64,7 @@ for(let i=0; i<multiple; i++) {
     createDiv.style.border = "1px solid black";
     createDiv.style.width =cellSize;
     createDiv.style.height =cellSize;
-    createDiv.style.background ="hotpink";
+    createDiv.style.background ="pink";
     
     createDiv.className = "squares"
     
@@ -83,18 +84,19 @@ function chooseColour (colourChoice) {
 
     
 
+
 redbtn.addEventListener("click", () => {
     
     
 
     colourChoice.addEventListener("mouseover", () => {
 
-
+        
         choice = "red";
+        
         colourChoice.style.background = choice
-        
-    
-        
+         
+       
         
             
         });
@@ -179,7 +181,7 @@ rainbowbtn.addEventListener("click", () => {
 
 
 
-    
+ 
 
 
  

@@ -48,7 +48,8 @@ h1 {
 .red {
     color: white;
     border: 4px solid red;
-    background-color: red; 
+    background-color: red;
+    
     
 }
 
@@ -83,3 +84,15 @@ h1 {
     background-image: linear-gradient(to right, red, yellow, pink, green, orange, purple, blue); 
     
 }
+
+.squares {
+    opacity: 1
+    transition: opacity 0.2s ease;
+}
+
+.squares:hover {
+    opacity: 0.5
+   
+}
+
+
