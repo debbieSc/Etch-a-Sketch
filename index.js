@@ -2,10 +2,19 @@ const container = document.querySelector(".container");
 const smallbtn = document.querySelector(".small");
 const mediumbtn = document.querySelector(".medium");
 const largebtn = document.querySelector(".large");
+const redbtn = document.querySelector(".red");
+const aquabtn = document.querySelector(".aqua");
+const purplebtn = document.querySelector(".purple");
+const blackbtn = document.querySelector(".black");
+const rainbowbtn = document.querySelector(".rainbow");
+let choice = "pink";
 let multiple = 0;
 let cellSize = "";
-console.log(container.offsetWidth)
-const multicolour = ["red", "yellow", "pink", "green", "orange", "purple", "blue"]
+let colourPick;
+console.log(container.offsetWidth);
+const multicolour = ["red", "yellow", "pink", "green", "orange", "purple", "blue"];
+
+
 
 smallbtn.addEventListener("click", () => {
     
@@ -15,7 +24,11 @@ smallbtn.addEventListener("click", () => {
     cellSize = ((container.offsetWidth / 16) - 2) + "px"
     gridSize()
 
-})
+});
+
+
+
+
 
 mediumbtn.addEventListener("click", () => {
 
@@ -24,7 +37,11 @@ mediumbtn.addEventListener("click", () => {
     multiple = 32 * 32
     cellSize = ((container.offsetWidth / 32) - 2) + "px"
     gridSize()
-})
+});
+
+
+
+
 
 largebtn.addEventListener("click", () => {
 
@@ -33,7 +50,11 @@ largebtn.addEventListener("click", () => {
     multiple = 64 * 64
     cellSize = ((container.offsetWidth / 64) - 2) + "px"
     gridSize()
-})
+});
+
+
+
+
 
 function gridSize() {
 
@@ -48,22 +69,121 @@ for(let i=0; i<multiple; i++) {
     
 container.appendChild(createDiv);
 
-createDiv.addEventListener("mouseover", () => {
+
+colourPick = createDiv
+
+chooseColour(colourPick)
+
+}
+};
 
 
-   
+
+function chooseColour (colourChoice) {
+
     
-    const choice = multicolour[Math.floor(Math.random() * multicolour.length)];
 
-    createDiv.style.background = choice;
+redbtn.addEventListener("click", () => {
+    
+    
+
+    colourChoice.addEventListener("mouseover", () => {
+
+
+        choice = "red";
+        colourChoice.style.background = choice
+        
     
         
-    });
+        
+            
+        });
+    
+
+})
+
+aquabtn.addEventListener("click", () => {
+    
+    
+    colourChoice.addEventListener("mouseover", () => {
+
+
+        choice = "aqua";
+        colourChoice.style.background = choice
+        
+    
+        
+        
+            
+        });
+    
+})
+
+
+purplebtn.addEventListener("click", () => {
+    
+    
+    colourChoice.addEventListener("mouseover", () => {
+
+        choice = "purple";
+   
+        colourChoice.style.background = choice
+        
+    
+        
+        
+            
+        });
+    
+})
+
+blackbtn.addEventListener("click", () => {
+    
+    
+    colourChoice.addEventListener("mouseover", () => {
+
+        choice = "black";
+   
+        colourChoice.style.background = choice
+        
+    
+        
+        
+            
+        });
+    
+})
+
+rainbowbtn.addEventListener("click", () => {
+    
+    
+    colourChoice.addEventListener("mouseover", () => {
+
+        choice = multicolour[Math.floor(Math.random() * multicolour.length)];
+
+        
+   
+        colourChoice.style.background = choice
+        
+    
+        
+        
+            
+        });
+     
+    
+    
+})
+}
+
+
+
+
     
 
 
-};  
-}
+ 
+
 
 
 
@@ -106,7 +226,7 @@ function customSize(){
 
    
 }
-}
+};
 
 function createCustomGrid (cellWidth) {
 
@@ -114,5 +234,3 @@ function createCustomGrid (cellWidth) {
     cellSize = ((container.offsetWidth / cellWidth) - 2) + "px"
     gridSize()
 }
-
-
