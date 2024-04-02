@@ -7,6 +7,7 @@ const aquabtn = document.querySelector(".aqua");
 const purplebtn = document.querySelector(".purple");
 const blackbtn = document.querySelector(".black");
 const rainbowbtn = document.querySelector(".rainbow");
+const erase = document.querySelector(".erase")
 let choice = "pink";
 let multiple = 0;
 let cellSize = "";
@@ -82,6 +83,25 @@ chooseColour(colourPick)
 
 function chooseColour (colourChoice) {
 
+
+    erase.addEventListener("click", () => {
+    
+    
+
+        colourChoice.addEventListener("mouseover", () => {
+    
+            
+            choice = "pink";
+            
+            colourChoice.style.background = choice
+             
+           
+            
+                
+            });
+        
+    
+    })
     
 
 
