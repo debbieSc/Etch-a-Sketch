@@ -93,12 +93,12 @@ h1 {
 }
 
 .squares {
-    opacity: 1
+    opacity: 1;
     transition: opacity 0.2s ease;
 }
 
 .squares:hover {
-    opacity: 0.5
+    opacity: 0.5;
    
 }
 
